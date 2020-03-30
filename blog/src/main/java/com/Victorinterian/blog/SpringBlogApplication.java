@@ -1,4 +1,4 @@
-package com.Victorinterian.blog;
+package com.victorinterian.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
