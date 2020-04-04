@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SpringBlogApplication",
+            "request": "launch",
+            "mainClass": "com.victorinterian.blog.SpringBlogApplication",
+            "projectName": "blog"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
