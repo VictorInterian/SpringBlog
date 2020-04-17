@@ -14,7 +14,7 @@ public class HomeController {
     public String index() {
         User user = new User();
         user.setFirstName("Victor");
-        user.setLastName("Cavazos");
+        user.setLastName("Victor");
         user.setUsername("victorinterian");
         user.setPassword("12345");
 
