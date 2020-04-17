@@ -30,9 +30,7 @@ public class User {
 
     private Date deleted_at;
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public Integer getId() {
         return id;
 
