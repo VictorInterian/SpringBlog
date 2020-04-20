@@ -15,7 +15,7 @@ public class HomeController {
         User user = new User();
         user.setFirstName("Victor");
         user.setLastName("Cavazos");
-        user.setUsername("victorinterian");
+        user.setUsername("victorinterian5");
         user.setPassword("12345");
 
         Session session = HibernateSession.open();
