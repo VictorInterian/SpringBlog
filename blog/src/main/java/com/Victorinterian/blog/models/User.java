@@ -1,37 +1,53 @@
 package com.victorinterian.blog.models;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.*;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+
 @Entity
 @Table(name = "users")
 public class User {
 
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
+    private Long id;
 
-    private Integer id;
+    @Column(name = "first_name", nullable = false)
     private String first_name;
+
+    @Column(name = "last_name", nullable = false)
     private String last_name;
+
+    @Column(name = "username", nullable = false)
     private String username;
+
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "image_url")
     private String image_url;
+
+    @Column(name = "remember_token")
     private String remember_token;
 
     @CreationTimestamp
-    private Date created_at;
+    @Column(name = "created_at", updatable = false, nullable = false)
+    private Timestamp created_at;
+
     @UpdateTimestamp
-    private Date updated_at;
+    @Column(name = "updated_at", updatable = false, nullable = false)
+    private Timestamp updated_at;
 
-    private Date deleted_at;
+    @Column(name = "deleted_at")
+    private Timestamp deleted_at;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
 
     }
@@ -84,27 +100,27 @@ public class User {
         this.remember_token = remember_token;
     }
 
-    public Date getCreatedAt() {
+    public Timestamp getCreatedAt() {
         return created_at;
     }
 
-    public void setCreatedAt(Date created_at) {
+    public void setCreatedAt(Timestamp created_at) {
         this.created_at = created_at;
     }
 
-    public Date getUpdatedAt() {
+    public Timestamp getUpdatedAt() {
         return updated_at;
     }
 
-    public void setUpdatedAt(Date updated_at) {
+    public void setUpdatedAt(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
 
-    public Date getDeletedAt() {
+    public Timestamp getDeletedAt() {
         return deleted_at;
     }
 
-    public void setDeletedAt(Date deleted_at) {
+    public void setDeletedAt(Timestamp deleted_at) {
         this.deleted_at = deleted_at;
     }
 
