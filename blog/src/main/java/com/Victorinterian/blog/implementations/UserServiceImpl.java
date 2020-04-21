@@ -1,4 +1,5 @@
 package com.victorinterian.blog.implementations;
+import java.util.List;
 
 import com.victorinterian.blog.models.User;
 import com.victorinterian.blog.repositories.UserRepository;
@@ -15,10 +16,13 @@ public class UserServiceImpl implements UserService {
     private UserRepository repository;
 
 
-    public User find(Long id) {
-         return repository.getOne(id);
+    public List<User> all(){
+        return repository.findAll();
     }
 
+    public User find(Long id){
+        return repository.getOne(id);
+    }
 
     public Boolean save(User user) {
          try {
@@ -29,5 +33,11 @@ public class UserServiceImpl implements UserService {
              return false;
          }
     }
+
+    public User findByUsername(String username){
+        return repository.findByUsername(username);
+    }
+
+
 
 }
